@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  timezone  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  habits      Habit[]
+  completions HabitCompletion[]
+  streakState StreakState?
+}
+
+model Habit {
+  id               String           @id @default(uuid())
+  userId           String
+  name             String
+  description      String?
+  verificationType String
+  secretKey        String?
+  createdHabitDay  String
+  archivedAt       DateTime?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  user        User              @relation(fields: [userId], references: [id])
+  completions HabitCompletion[]
+
+  @@index([userId, createdHabitDay])
+}
+
+model HabitCompletion {
+  id        String      @id @default(uuid())
+  userId    String
+  habitId   String
+  habitDay  String
+  status    String   @default("COMPLETED")
+  proofText String?
+  proofUrl  String?
+  source    String      @default("MANUAL")
+  createdAt DateTime    @default(now())
+
+  user  User  @relation(fields: [userId], references: [id])
+  habit Habit @relation(fields: [habitId], references: [id])
+
+  @@unique([habitId, habitDay])
+  @@index([userId, habitDay])
+}
+
+model StreakState {
+  id                    String   @id @default(uuid())
+  userId                String   @unique
+  currentStreak          Int      @default(0)
+  freezeQuota            Int      @default(2)
+  lastEvaluatedHabitDay  String?
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+}

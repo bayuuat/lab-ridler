@@ -1,0 +1,16 @@
+**/node_modules/
+**/.next/
+**/dist/
+.build/
+**/.env
+**/.env.local
+.env.compose
+**/coverage/
+.DS_Store
+**/xcuserdata/
+**/*.xcuserstate
+apps/habitquest-api/prisma/dev.db
+apps/habitquest-api/prisma/dev.db-journal
+apps/habitquest-api/uploads/
+apps/antislop/data/progress.json
+apps/antislop/data/submissions.json

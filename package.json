@@ -1,0 +1,18 @@
+{
+  "name": "lab-ridler",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev:all": "bash scripts/dev-all.sh",
+    "dev:api": "cd apps/habitquest-api && HOST=127.0.0.1 PORT=3001 PUBLIC_BASE_URL=http://127.0.0.1:3001 npm run dev",
+    "dev:antislop": "cd apps/antislop && PORT=3000 HABITQUEST_WEBHOOK_URL=http://127.0.0.1:3001/api/v1/webhook/external-verify pnpm dev",
+    "setup:webhook": "node scripts/setup-antislop-webhook.mjs",
+    "mac:build": "bash scripts/build-habitquest-mac.sh",
+    "mac:run": "bash scripts/run-habitquest-mac.sh",
+    "test": "npm --prefix apps/habitquest-api test",
+    "build": "npm --prefix apps/habitquest-api run build && pnpm --dir apps/antislop build",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up --build",
+    "docker:down": "docker compose down"
+  }
+}

@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Problem {
+  id        String   @id @default(uuid())
+  slug      String   @unique
+  title     String
+  difficulty String
+  topic     String
+  statement String
+  createdAt DateTime @default(now())
+  tests     ProblemTestCase[]
+  submissions Submission[]
+  dailyChallenges DailyChallenge[]
+}
+
+model ProblemTestCase {
+  id        String  @id @default(uuid())
+  problem   Problem @relation(fields: [problemId], references: [id])
+  problemId String
+  inputText String
+  expectedText String
+  isSample  Boolean @default(false)
+}
+
+model Submission {
+  id         String  @id @default(uuid())
+  problem    Problem @relation(fields: [problemId], references: [id])
+  problemId  String
+  sourceCode String
+  verdict    String?
+  createdAt  DateTime @default(now())
+}
+
+model DailyChallenge {
+  id            String @id @default(uuid())
+  challengeDate DateTime @unique
+  problem       Problem @relation(fields: [problemId], references: [id])
+  problemId     String
+}

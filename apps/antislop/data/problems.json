@@ -1,0 +1,433 @@
+[
+  {
+    "id": "two-sum-basic",
+    "title": "Two Sum (Basic)",
+    "slug": "two-sum-basic",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "two_sum",
+    "statement": "Given an array of integers nums and an integer target, return the indices of the two numbers that add up to target.",
+    "starter_code": "def two_sum(nums, target):\n    return []\n",
+    "judge": { "mode": "two-sum" },
+    "samples": [
+      { "input": "[[2, 7, 11, 15], 9]", "output": "[0, 1]" },
+      { "input": "[[3, 2, 4], 6]", "output": "[1, 2]" }
+    ],
+    "hidden_tests": [{ "input": "[[1, 5, 3, 7], 8]", "output": "[1, 2]" }]
+  },
+  {
+    "id": "reverse-string",
+    "title": "Reverse String",
+    "slug": "reverse-string",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "reverse_string",
+    "statement": "Write a function that returns the characters of a string in reverse order.",
+    "starter_code": "def reverse_string(chars):\n    return chars[::-1]\n",
+    "samples": [
+      { "input": "[[\"h\", \"e\", \"l\", \"l\", \"o\"]]", "output": "[\"o\", \"l\", \"l\", \"e\", \"h\"]" }
+    ],
+    "hidden_tests": [{ "input": "[[\"a\", \"i\"]]", "output": "[\"i\", \"a\"]" }]
+  },
+  {
+    "id": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "slug": "valid-parentheses",
+    "difficulty": "easy",
+    "topic": "stack",
+    "entry_point": "is_valid_parentheses",
+    "statement": "Return true if the bracket string is balanced and false otherwise.",
+    "starter_code": "def is_valid_parentheses(s):\n    return False\n",
+    "samples": [
+      { "input": "[\"()[]{}\"]", "output": "true" },
+      { "input": "[\"([)]\"]", "output": "false" }
+    ],
+    "hidden_tests": [{ "input": "[\"((()))\"]", "output": "true" }]
+  },
+  {
+    "id": "maximum-subarray",
+    "title": "Maximum Subarray",
+    "slug": "maximum-subarray",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "max_subarray",
+    "statement": "Return the largest sum of any contiguous subarray.",
+    "starter_code": "def max_subarray(nums):\n    return 0\n",
+    "samples": [
+      { "input": "[[-2, 1, -3, 4, -1, 2, 1, -5, 4]]", "output": "6" }
+    ],
+    "hidden_tests": [{ "input": "[[1, 2, 3]]", "output": "6" }]
+  },
+  {
+    "id": "palindrome-number",
+    "title": "Palindrome Number",
+    "slug": "palindrome-number",
+    "difficulty": "easy",
+    "topic": "math",
+    "entry_point": "is_palindrome_number",
+    "statement": "Return true when a number reads the same forward and backward.",
+    "starter_code": "def is_palindrome_number(n):\n    return False\n",
+    "samples": [
+      { "input": "[121]", "output": "true" },
+      { "input": "[123]", "output": "false" }
+    ],
+    "hidden_tests": [{ "input": "[1331]", "output": "true" }]
+  },
+  {
+    "id": "merge-sorted-arrays",
+    "title": "Merge Sorted Arrays",
+    "slug": "merge-sorted-arrays",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "merge_sorted_arrays",
+    "statement": "Merge two sorted arrays into one sorted array.",
+    "starter_code": "def merge_sorted_arrays(first, second):\n    return sorted(first + second)\n",
+    "samples": [
+      { "input": "[[1, 2, 4], [1, 3, 4]]", "output": "[1, 1, 2, 3, 4, 4]" }
+    ],
+    "hidden_tests": [{ "input": "[[0, 5], [2, 3]]", "output": "[0, 2, 3, 5]" }]
+  },
+  {
+    "id": "binary-search",
+    "title": "Binary Search",
+    "slug": "binary-search",
+    "difficulty": "easy",
+    "topic": "search",
+    "entry_point": "binary_search",
+    "statement": "Return the index of target in a sorted array or -1 if it is missing.",
+    "starter_code": "def binary_search(nums, target):\n    return -1\n",
+    "samples": [
+      { "input": "[[1, 3, 5, 7, 9], 7]", "output": "3" },
+      { "input": "[[1, 3, 5, 7, 9], 2]", "output": "-1" }
+    ],
+    "hidden_tests": [{ "input": "[[2, 4, 6, 8], 8]", "output": "3" }]
+  },
+  {
+    "id": "first-unique-character",
+    "title": "First Unique Character",
+    "slug": "first-unique-character",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "first_unique_character",
+    "statement": "Return the first index whose character appears only once.",
+    "starter_code": "def first_unique_character(s):\n    return -1\n",
+    "samples": [
+      { "input": "[\"leetcode\"]", "output": "0" },
+      { "input": "[\"loveleetcode\"]", "output": "2" }
+    ],
+    "hidden_tests": [{ "input": "[\"aabb\"]", "output": "-1" }]
+  },
+  {
+    "id": "majority-element",
+    "title": "Majority Element",
+    "slug": "majority-element",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "majority_element",
+    "statement": "Return the element that appears more than half the time.",
+    "starter_code": "def majority_element(nums):\n    return 0\n",
+    "samples": [
+      { "input": "[[2, 2, 1, 1, 1, 2, 2]]", "output": "2" }
+    ],
+    "hidden_tests": [{ "input": "[[3, 3, 4]]", "output": "3" }]
+  },
+  {
+    "id": "move-zeroes",
+    "title": "Move Zeroes",
+    "slug": "move-zeroes",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "move_zeroes",
+    "statement": "Move all zeroes to the end while keeping the order of non-zero values.",
+    "starter_code": "def move_zeroes(nums):\n    return [n for n in nums if n != 0] + [0] * nums.count(0)\n",
+    "samples": [
+      { "input": "[[0, 1, 0, 3, 12]]", "output": "[1, 3, 12, 0, 0]" }
+    ],
+    "hidden_tests": [{ "input": "[[1, 0, 1]]", "output": "[1, 1, 0]" }]
+  },
+  {
+    "id": "anagram-check",
+    "title": "Anagram Check",
+    "slug": "anagram-check",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "is_anagram",
+    "statement": "Return true if both strings use the same characters with the same counts.",
+    "starter_code": "def is_anagram(first, second):\n    return False\n",
+    "samples": [
+      { "input": "[\"anagram\", \"nagaram\"]", "output": "true" },
+      { "input": "[\"rat\", \"car\"]", "output": "false" }
+    ],
+    "hidden_tests": [{ "input": "[\"listen\", \"silent\"]", "output": "true" }]
+  },
+  {
+    "id": "intersection-arrays",
+    "title": "Intersection of Arrays",
+    "slug": "intersection-arrays",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "intersection_arrays",
+    "statement": "Return the distinct numbers present in both arrays, sorted ascending.",
+    "starter_code": "def intersection_arrays(first, second):\n    return sorted(list(set(first) & set(second)))\n",
+    "samples": [
+      { "input": "[[1, 2, 2, 1], [2, 2]]", "output": "[2]" }
+    ],
+    "hidden_tests": [{ "input": "[[4, 9, 5], [9, 4, 9, 8, 4]]", "output": "[4, 9]" }]
+  },
+  {
+    "id": "missing-number",
+    "title": "Missing Number",
+    "slug": "missing-number",
+    "difficulty": "easy",
+    "topic": "math",
+    "entry_point": "missing_number",
+    "statement": "Given numbers from 0 to n with one missing, return the missing value.",
+    "starter_code": "def missing_number(nums):\n    return 0\n",
+    "samples": [
+      { "input": "[[3, 0, 1]]", "output": "2" }
+    ],
+    "hidden_tests": [{ "input": "[[0, 1]]", "output": "2" }]
+  },
+  {
+    "id": "climb-stairs",
+    "title": "Climb Stairs",
+    "slug": "climb-stairs",
+    "difficulty": "easy",
+    "topic": "dp",
+    "entry_point": "climb_stairs",
+    "statement": "Return how many ways there are to climb n steps when you can take 1 or 2 steps.",
+    "starter_code": "def climb_stairs(n):\n    return 0\n",
+    "samples": [
+      { "input": "[3]", "output": "3" },
+      { "input": "[4]", "output": "5" }
+    ],
+    "hidden_tests": [{ "input": "[5]", "output": "8" }]
+  },
+  {
+    "id": "fibonacci-sequence",
+    "title": "Fibonacci Sequence",
+    "slug": "fibonacci-sequence",
+    "difficulty": "easy",
+    "topic": "recursion",
+    "entry_point": "fib_n",
+    "statement": "Return the n-th Fibonacci number with F(0)=0 and F(1)=1.",
+    "starter_code": "def fib_n(n):\n    return 0\n",
+    "samples": [
+      { "input": "[6]", "output": "8" },
+      { "input": "[1]", "output": "1" }
+    ],
+    "hidden_tests": [{ "input": "[7]", "output": "13" }]
+  },
+  {
+    "id": "factorial",
+    "title": "Factorial",
+    "slug": "factorial",
+    "difficulty": "easy",
+    "topic": "math",
+    "entry_point": "factorial",
+    "statement": "Return n! for a non-negative integer n.",
+    "starter_code": "def factorial(n):\n    return 1\n",
+    "samples": [
+      { "input": "[5]", "output": "120" },
+      { "input": "[3]", "output": "6" }
+    ],
+    "hidden_tests": [{ "input": "[6]", "output": "720" }]
+  },
+  {
+    "id": "sum-digits",
+    "title": "Sum Digits",
+    "slug": "sum-digits",
+    "difficulty": "easy",
+    "topic": "math",
+    "entry_point": "sum_digits",
+    "statement": "Return the sum of all digits in a non-negative integer.",
+    "starter_code": "def sum_digits(n):\n    return 0\n",
+    "samples": [
+      { "input": "[12345]", "output": "15" }
+    ],
+    "hidden_tests": [{ "input": "[909]", "output": "18" }]
+  },
+  {
+    "id": "fizz-buzz",
+    "title": "Fizz Buzz",
+    "slug": "fizz-buzz",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "fizz_buzz",
+    "statement": "Return FizzBuzz numbers from 1 to n using the standard rules.",
+    "starter_code": "def fizz_buzz(n):\n    return []\n",
+    "samples": [
+      { "input": "[5]", "output": "[\"1\", \"2\", \"Fizz\", \"4\", \"Buzz\"]" }
+    ],
+    "hidden_tests": [{ "input": "[3]", "output": "[\"1\", \"2\", \"Fizz\"]" }]
+  },
+  {
+    "id": "rotate-array",
+    "title": "Rotate Array",
+    "slug": "rotate-array",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "rotate_array",
+    "statement": "Rotate an array to the right by k steps.",
+    "starter_code": "def rotate_array(nums, k):\n    if not nums:\n        return []\n    k %= len(nums)\n    return nums[-k:] + nums[:-k]\n",
+    "samples": [
+      { "input": "[[1, 2, 3, 4, 5, 6, 7], 3]", "output": "[5, 6, 7, 1, 2, 3, 4]" }
+    ],
+    "hidden_tests": [{ "input": "[[1, 2], 1]", "output": "[2, 1]" }]
+  },
+  {
+    "id": "remove-duplicates",
+    "title": "Remove Duplicates",
+    "slug": "remove-duplicates",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "remove_duplicates",
+    "statement": "Return the array after removing duplicate values while keeping the first occurrence.",
+    "starter_code": "def remove_duplicates(nums):\n    return list(dict.fromkeys(nums))\n",
+    "samples": [
+      { "input": "[[1, 1, 2, 3, 3]]", "output": "[1, 2, 3]" }
+    ],
+    "hidden_tests": [{ "input": "[[2, 2, 2]]", "output": "[2]" }]
+  },
+  {
+    "id": "running-sum",
+    "title": "Running Sum",
+    "slug": "running-sum",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "running_sum",
+    "statement": "Return the prefix sums of the input array.",
+    "starter_code": "def running_sum(nums):\n    total = 0\n    result = []\n    for num in nums:\n        total += num\n        result.append(total)\n    return result\n",
+    "samples": [
+      { "input": "[[1, 2, 3, 4]]", "output": "[1, 3, 6, 10]" }
+    ],
+    "hidden_tests": [{ "input": "[[3, 1, 2]]", "output": "[3, 4, 6]" }]
+  },
+  {
+    "id": "range-sum",
+    "title": "Range Sum",
+    "slug": "range-sum",
+    "difficulty": "easy",
+    "topic": "prefix-sum",
+    "entry_point": "range_sum",
+    "statement": "Return the sum of the values from index l to r inclusive.",
+    "starter_code": "def range_sum(nums, l, r):\n    return sum(nums[l:r + 1])\n",
+    "samples": [
+      { "input": "[[2, 4, 6, 8, 10], 1, 3]", "output": "18" }
+    ],
+    "hidden_tests": [{ "input": "[[5, 5, 5], 0, 2]", "output": "15" }]
+  },
+  {
+    "id": "sorted-squares",
+    "title": "Sorted Squares",
+    "slug": "sorted-squares",
+    "difficulty": "easy",
+    "topic": "two-pointers",
+    "entry_point": "sorted_squares",
+    "statement": "Return the squares of the numbers sorted in non-decreasing order.",
+    "starter_code": "def sorted_squares(nums):\n    return sorted(n * n for n in nums)\n",
+    "samples": [
+      { "input": "[[-4, -1, 0, 3, 10]]", "output": "[0, 1, 9, 16, 100]" }
+    ],
+    "hidden_tests": [{ "input": "[[-7, -3, 2, 3, 11]]", "output": "[4, 9, 9, 49, 121]" }]
+  },
+  {
+    "id": "longest-common-prefix",
+    "title": "Longest Common Prefix",
+    "slug": "longest-common-prefix",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "longest_common_prefix",
+    "statement": "Return the longest prefix shared by all strings in the list.",
+    "starter_code": "def longest_common_prefix(words):\n    if not words:\n        return \"\"\n    prefix = words[0]\n    for word in words[1:]:\n        while not word.startswith(prefix):\n            prefix = prefix[:-1]\n            if not prefix:\n                return \"\"\n    return prefix\n",
+    "samples": [
+      { "input": "[[\"flower\", \"flow\", \"flight\"]]", "output": "\"fl\"" }
+    ],
+    "hidden_tests": [{ "input": "[[\"dog\", \"racecar\", \"car\"]]", "output": "\"\"" }]
+  },
+  {
+    "id": "count-vowels",
+    "title": "Count Vowels",
+    "slug": "count-vowels",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "count_vowels",
+    "statement": "Count how many vowels appear in the string.",
+    "starter_code": "def count_vowels(s):\n    return sum(1 for char in s.lower() if char in 'aeiou')\n",
+    "samples": [
+      { "input": "[\"hello world\"]", "output": "3" }
+    ],
+    "hidden_tests": [{ "input": "[\"anti slop\"]", "output": "2" }]
+  },
+  {
+    "id": "reverse-words",
+    "title": "Reverse Words",
+    "slug": "reverse-words",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "reverse_words",
+    "statement": "Reverse the order of words in a sentence.",
+    "starter_code": "def reverse_words(s):\n    return ' '.join(reversed(s.split()))\n",
+    "samples": [
+      { "input": "[\"the sky is blue\"]", "output": "\"blue is sky the\"" }
+    ],
+    "hidden_tests": [{ "input": "[\"practice makes progress\"]", "output": "\"progress makes practice\"" }]
+  },
+  {
+    "id": "chunk-array",
+    "title": "Chunk Array",
+    "slug": "chunk-array",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "chunk_array",
+    "statement": "Split the array into chunks of size k.",
+    "starter_code": "def chunk_array(nums, size):\n    return [nums[index:index + size] for index in range(0, len(nums), size)]\n",
+    "samples": [
+      { "input": "[[1, 2, 3, 4, 5], 2]", "output": "[[1, 2], [3, 4], [5]]" }
+    ],
+    "hidden_tests": [{ "input": "[[1, 2, 3], 4]", "output": "[[1, 2, 3]]" }]
+  },
+  {
+    "id": "detect-duplicates",
+    "title": "Detect Duplicates",
+    "slug": "detect-duplicates",
+    "difficulty": "easy",
+    "topic": "array",
+    "entry_point": "contains_duplicate",
+    "statement": "Return true when the array contains any duplicate value.",
+    "starter_code": "def contains_duplicate(nums):\n    return len(nums) != len(set(nums))\n",
+    "samples": [
+      { "input": "[[1, 2, 3, 1]]", "output": "true" },
+      { "input": "[[1, 2, 3, 4]]", "output": "false" }
+    ],
+    "hidden_tests": [{ "input": "[[9, 9]]", "output": "true" }]
+  },
+  {
+    "id": "capitalize-sentence",
+    "title": "Capitalize Sentence",
+    "slug": "capitalize-sentence",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "capitalize_sentence",
+    "statement": "Return the sentence with the first letter capitalized and the rest unchanged.",
+    "starter_code": "def capitalize_sentence(s):\n    if not s:\n        return s\n    return s[0].upper() + s[1:]\n",
+    "samples": [
+      { "input": "[\"hello world\"]", "output": "\"Hello world\"" }
+    ],
+    "hidden_tests": [{ "input": "[\"anti slop\"]", "output": "\"Anti slop\"" }]
+  },
+  {
+    "id": "count-words",
+    "title": "Count Words",
+    "slug": "count-words",
+    "difficulty": "easy",
+    "topic": "string",
+    "entry_point": "count_words",
+    "statement": "Count the number of words in a sentence.",
+    "starter_code": "def count_words(s):\n    return len(s.split())\n",
+    "samples": [
+      { "input": "[\"learn data structures daily\"]", "output": "4" }
+    ],
+    "hidden_tests": [{ "input": "[\"one two\"]", "output": "2" }]
+  }
+]

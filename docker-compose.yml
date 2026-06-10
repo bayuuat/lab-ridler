@@ -1,0 +1,36 @@
+services:
+  habitquest-api:
+    build:
+      context: ./apps/habitquest-api
+    ports:
+      - "${HABITQUEST_API_PORT:-31874}:3001"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3001
+      PUBLIC_BASE_URL: "${HABITQUEST_PUBLIC_BASE_URL:-http://localhost:3001}"
+      DEFAULT_TIMEZONE: "${HABITQUEST_DEFAULT_TIMEZONE:-Asia/Jakarta}"
+      DEFAULT_FREEZE_QUOTA: "${HABITQUEST_DEFAULT_FREEZE_QUOTA:-2}"
+      DATABASE_URL: "file:/data/habitquest/dev.db"
+      HABITQUEST_SQLITE_PATH: "/data/habitquest/dev.db"
+    volumes:
+      - habitquest_data:/data/habitquest
+      - habitquest_uploads:/app/uploads
+
+  antislop:
+    build:
+      context: ./apps/antislop
+    depends_on:
+      - habitquest-api
+    ports:
+      - "${ANTISLOP_PORT:-31873}:3000"
+    environment:
+      PORT: 3000
+      HABITQUEST_WEBHOOK_URL: "http://habitquest-api:3001/api/v1/webhook/external-verify"
+      HABITQUEST_DAILY_CODING_HABIT_ID: "${HABITQUEST_DAILY_CODING_HABIT_ID:-}"
+      HABITQUEST_DAILY_CODING_SECRET_KEY: "${HABITQUEST_DAILY_CODING_SECRET_KEY:-dev-daily-coding-secret}"
+    volumes:
+      - ./apps/antislop/data:/app/data
+
+volumes:
+  habitquest_data:
+  habitquest_uploads:
