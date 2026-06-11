@@ -250,7 +250,7 @@ private struct HabitWidgetPendingList: View {
 }
 
 private struct HabitWidgetService {
-    private let baseURL = URL(string: "http://127.0.0.1:3001")!
+    private let baseURL = URL(string: "https://hq.bayuuat.com")!
     private let userId = "00000000-0000-4000-8000-000000000001"
 
     func loadSnapshot() async -> HabitWidgetSnapshot {

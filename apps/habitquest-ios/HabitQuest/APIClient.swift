@@ -10,7 +10,7 @@ struct APIClient {
     private let encoder: JSONEncoder
 
     init(
-        baseURL: URL = URL(string: "http://127.0.0.1:3001")!,
+        baseURL: URL = URL(string: "https://hq.bayuuat.com")!,
         userId: String = "00000000-0000-4000-8000-000000000001",
         session: URLSession = .shared
     ) {

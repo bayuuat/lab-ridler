@@ -13,11 +13,11 @@ final class DashboardViewModel: ObservableObject {
     @Published var timezone = ""
     @Published var errorMessage: String?
     @Published var isLoading = false
-    @Published var backendURLText = "http://127.0.0.1:3001"
+    @Published var backendURLText = "https://hq.bayuuat.com"
     @Published var pendingSyncHabitIds: Set<String> = []
 
     private var client: APIClient {
-        APIClient(baseURL: URL(string: backendURLText) ?? URL(string: "http://127.0.0.1:3001")!)
+        APIClient(baseURL: URL(string: backendURLText) ?? URL(string: "https://hq.bayuuat.com")!)
     }
 
     var completedCount: Int {
