@@ -77,6 +77,15 @@ export async function readSubmissions(): Promise<SubmissionRecord[]> {
   return readJsonFile<SubmissionRecord[]>(submissionsFile, [])
 }
 
+export async function readSolvedProblemSlugs(): Promise<string[]> {
+  const submissions = await readSubmissions()
+  const solvedSlugs = submissions
+    .filter((submission) => submission.mode === 'submit' && submission.verdict === 'passed')
+    .map((submission) => submission.slug)
+
+  return Array.from(new Set(solvedSlugs)).sort()
+}
+
 export async function saveSubmission(record: SubmissionRecord) {
   const submissions = await readSubmissions()
   submissions.push(record)
